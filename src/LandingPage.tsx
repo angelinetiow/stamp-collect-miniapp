@@ -231,14 +231,14 @@ export const LandingPage: React.FC = () => {
               onClick={() => handleStampClick(0)}
             >
               <img 
-                src={`/svg/${collectedStamps[0] || storeStampStun[0] || storeStampShrinking[0] ? 'store stamp-filled' : 'store stamp-default'}.svg`} 
+                src={`./svg/${collectedStamps[0] || storeStampStun[0] || storeStampShrinking[0] ? 'store stamp-filled' : 'store stamp-default'}.svg`} 
                 alt="Store stamp 1" 
                 className={`stamp-svg${storeStampStun[0] ? ' big-stun' : ''}${storeStampShrinking[0] ? ' big-to-small' : ''}`}
               />
             </div>
             <div className="line-connector">
               <img 
-                src={`/svg/${totalCollected >= 2 ? 'line-filled' : 'line-default'}.svg`} 
+                src={`./svg/${totalCollected >= 2 ? 'line-filled' : 'line-default'}.svg`} 
                 alt="line connector" 
                 className="connector-svg"
               />
@@ -252,13 +252,13 @@ export const LandingPage: React.FC = () => {
               onClick={() => handleStampClick(1)}
             >
               <img 
-                src={`/svg/${collectedStamps[1] || storeStampStun[1] || storeStampShrinking[1] ? 'store stamp-filled' : 'store stamp-default'}.svg`} 
+                src={`./svg/${collectedStamps[1] || storeStampStun[1] || storeStampShrinking[1] ? 'store stamp-filled' : 'store stamp-default'}.svg`} 
                 alt="Store stamp 2" 
                 className={`stamp-svg${storeStampStun[1] ? ' big-stun' : ''}${storeStampShrinking[1] ? ' big-to-small' : ''}`}
               />
               <div className="curve-connector right-curve">
                 <img 
-                  src={`/svg/${totalCollected >= 3 ? 'right curve-filled' : 'right curve-default'}.svg`} 
+                  src={`./svg/${totalCollected >= 3 ? 'right curve-filled' : 'right curve-default'}.svg`} 
                   alt="right curve connector" 
                   className="connector-svg"
                 />
@@ -275,13 +275,13 @@ export const LandingPage: React.FC = () => {
               onClick={() => handleStampClick(3)}
             >
               <img 
-                src={`/svg/${collectedStamps[3] || storeStampStun[3] || storeStampShrinking[3] ? 'store stamp-filled' : 'store stamp-default'}.svg`} 
+                src={`./svg/${collectedStamps[3] || storeStampStun[3] || storeStampShrinking[3] ? 'store stamp-filled' : 'store stamp-default'}.svg`} 
                 alt="Store stamp 4" 
                 className={`stamp-svg${storeStampStun[3] ? ' big-stun' : ''}${storeStampShrinking[3] ? ' big-to-small' : ''}`}
               />
               <div className="curve-connector left-curve">
                 <img 
-                  src={`/svg/${totalCollected >= 5 ? 'left curve-filled' : 'left curve-default'}.svg`} 
+                  src={`./svg/${totalCollected >= 5 ? 'left curve-filled' : 'left curve-default'}.svg`} 
                   alt="left curve connector" 
                   className="connector-svg"
                 />
@@ -289,7 +289,7 @@ export const LandingPage: React.FC = () => {
             </div>
             <div className="line-connector">
               <img 
-                src={`/svg/${totalCollected >= 4 ? 'line-filled' : 'line-default'}.svg`} 
+                src={`./svg/${totalCollected >= 4 ? 'line-filled' : 'line-default'}.svg`} 
                 alt="line connector" 
                 className="connector-svg"
               />
@@ -302,7 +302,7 @@ export const LandingPage: React.FC = () => {
               onClick={() => handleStampClick(2)}
             >
               <img 
-                src={`/svg/${collectedStamps[2] || storeStampStun[2] || storeStampShrinking[2] ? 'store stamp-filled' : 'store stamp-default'}.svg`} 
+                src={`./svg/${collectedStamps[2] || storeStampStun[2] || storeStampShrinking[2] ? 'store stamp-filled' : 'store stamp-default'}.svg`} 
                 alt="Store stamp 3" 
                 className={`stamp-svg${storeStampStun[2] ? ' big-stun' : ''}${storeStampShrinking[2] ? ' big-to-small' : ''}`}
               />
@@ -318,7 +318,7 @@ export const LandingPage: React.FC = () => {
               onClick={() => handleStampClick(4)}
             >
               <img 
-                src={`/svg/${collectedStamps[4] || rewardStampStun || rewardStampShrinking ? 'reward stamp-filled' : 'reward stamp-default'}.svg`} 
+                src={`./svg/${collectedStamps[4] || rewardStampStun || rewardStampShrinking ? 'reward stamp-filled' : 'reward stamp-default'}.svg`} 
                 alt="Reward stamp" 
                 className={`stamp-svg${rewardStampStun ? ' big-stun' : ''}${rewardStampShrinking ? ' big-to-small' : ''}`}
               />
@@ -341,7 +341,7 @@ export const LandingPage: React.FC = () => {
           <div className="reward-modal" style={{position: 'relative', display: 'flex', justifyContent: 'center', alignItems: 'center', overflow: 'visible'}} onClick={e => e.stopPropagation()}>
             <div className="reward-ray-bg" style={{position: 'absolute', top: '50%', left: '50%', transform: 'translate(-50%, -50%)', zIndex: 0, width: '600px', height: '600px', pointerEvents: 'none'}}>
               <svg className="reward-ray-svg reward-ray-transition" viewBox="0 0 600 600" fill="none" xmlns="http://www.w3.org/2000/svg" style={{width: '100%', height: '100%'}}>
-                <image href="/svg/ray-sparkle.svg" x="0" y="0" width="600" height="600" />
+                <image href="./svg/ray-sparkle.svg" x="0" y="0" width="600" height="600" />
               </svg>
             </div>
             <div style={{position: 'relative', zIndex: 1, width: '100%'}}>
@@ -509,7 +509,7 @@ export const LandingPage: React.FC = () => {
             <div className="stamp-collected-content">
               <div className="stamp-collected-header">
                 <div className="stamp-collected-image">
-                  <img src="/svg/store stamp-filled.svg" alt="Stamp collected" />
+                  <img src="./svg/store stamp-filled.svg" alt="Stamp collected" />
                 </div>
                 <h2 className="body2">Stamp Collected!</h2>
                 <p className="body3 stamp-collected-text">
@@ -531,7 +531,7 @@ export const LandingPage: React.FC = () => {
             <div className="stamp-collected-content">
               <div className="stamp-collected-header">
                 <div className="reward-stamp-collected-image">
-                  <img src="/svg/stamp illustration.svg" alt="Reward stamp collected" />
+                  <img src="./svg/stamp illustration.svg" alt="Reward stamp collected" />
                 </div>
                 <h2 className="body2">Stamp Collected!</h2>
                 <p className="body3 stamp-collected-text">You have successfully collected all stamps!</p>

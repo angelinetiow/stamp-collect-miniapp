@@ -47,7 +47,13 @@ module.exports = (env, argv) => {
               loader: 'css-loader',
               options: {
                 url: {
-                  filter: (url) => !url.startsWith('/'),
+                  // Don't process URLs for images/svg - let browser resolve at runtime
+                  filter: (url) => {
+                    if (url.startsWith('/')) return false;
+                    if (url.startsWith('images/')) return false;
+                    if (url.startsWith('svg/')) return false;
+                    return true;
+                  },
                 },
               },
             },

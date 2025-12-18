@@ -48,7 +48,7 @@ export const STATIC_PRIZES: Prize[] = [
     prizeType: 'voucher',
     name: 'Free Coffee Voucher',
     description: 'Enjoy a free cup of coffee at participating merchants',
-    image: '/images/coffee-voucher.png',
+    image: './images/coffee-voucher.png',
     validityStart: '2024-01-01',
     validityEnd: '2025-12-31',
     selectedVoucher: 'voucher-coffee-001',
@@ -128,7 +128,7 @@ export function getPrizeImage(prize: Prize): string {
   if (prize.image) {
     return prize.image;
   }
-  return '/svg/reward stamp-default.svg';
+  return './svg/reward stamp-default.svg';
 }
 
 /**
