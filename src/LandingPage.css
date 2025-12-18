@@ -1,0 +1,743 @@
+/* Reward Modal Styles */
+.reward-modal {
+  border-radius: 24px;
+  max-width: 420px;
+  width: 96%;
+  padding: 48px 24px 32px 24px;
+  position: relative;
+  text-align: center;
+  box-shadow: 0 8px 32px rgba(60, 0, 156, 0.12);
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  overflow: visible;
+}
+
+.reward-ray-transition {
+  animation: rayShine 2s linear infinite;
+}
+
+@keyframes rayShine {
+  0% {
+    opacity: 0.4;
+  }
+  50% {
+    opacity: 1;
+  }
+  100% {
+    opacity: 0.4;
+  }
+}
+
+.reward-ray-bg {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  width: 420px;
+  height: 420px;
+  pointer-events: none;
+  z-index: 0;
+}
+
+.reward-ray-svg {
+  width: 100%;
+  height: 100%;
+  opacity: 0.4;
+  animation: rayShine 2s linear infinite;
+}
+
+.reward-modal > * {
+  position: relative;
+  z-index: 1;
+}
+
+.reward-modal-title {
+  color: #fff;
+}
+
+.reward-voucher-card {
+  width: inherit;
+  min-height: 62px;
+  max-width: 165px;
+  text-align: left;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+}
+
+.reward-voucher-img {
+  width: 100%;
+  height: 120px;
+  object-fit: cover;
+  border-radius: 8px;
+}
+
+.reward-voucher-info {
+  background: var(--Neutral-White, #fff);
+  width: inherit;
+  padding: 8px 12px;
+  text-align: left;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  border-radius: 8px;
+}
+
+.reward-voucher-brand {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  margin-bottom: 4px;
+}
+
+.reward-voucher-title {
+  font-size: 18px;
+  font-weight: 700;
+  color: #1d1d1d;
+  margin-bottom: 4px;
+}
+
+.reward-voucher-valid {
+  font-size: 13px;
+  color: #6b7280;
+}
+
+.reward-modal-subtitle {
+  font-weight: 700;
+  color: #fff;
+}
+
+.reward-modal-btn {
+  width: 100%;
+  max-width: 260px;
+  padding: 16px 0;
+  background: linear-gradient(90deg, #f3d426, #e99917, #f2bb15);
+  border: none;
+  border-radius: 32px;
+  font-size: 20px;
+  font-weight: 700;
+  color: #fff;
+  margin-top: 16px;
+  box-shadow: 0 4px 16px rgba(243, 212, 38, 0.18);
+  cursor: pointer;
+  transition: background 0.2s;
+}
+
+.reward-modal-btn:active {
+  background: linear-gradient(90deg, #e99917, #f3d426, #f2bb15);
+}
+
+.reward-stamp-collected-modal {
+  background: white;
+  width: 90%;
+  max-width: 294px;
+  border-radius: 16px;
+  padding: 20px 16px;
+  position: relative;
+  text-align: center;
+}
+
+.landing-bg {
+  min-height: 100vh;
+  background: url("../public/images/stamp collect-background.png") no-repeat center center;
+  background-size: cover;
+  display: flex;
+  justify-content: center;
+  align-items: flex-start;
+  text-align: center;
+  position: relative;
+  width: 100%;
+  overflow-y: auto;
+  overflow-x: hidden;
+  margin: 0 auto;
+}
+
+.landing-container {
+  padding: 32px 24px 24px 24px;
+  width: 420px;
+  position: relative;
+}
+
+.landing-header {
+  display: flex;
+  align-items: left;
+  justify-content: left;
+  position: relative;
+}
+
+.back-btn {
+  background: none;
+  border: none;
+  font-size: 24px;
+  cursor: pointer;
+  color: #333;
+  position: absolute;
+  left: 0;
+}
+
+.landing-title h2 {
+  font-size: 20px;
+  font-weight: 700;
+  margin-bottom: 4px;
+  text-align: center;
+  color: #37276c;
+  line-height: 1.15;
+}
+
+.landing-title .gradient-text {
+  font-size: 22.5px;
+  background: linear-gradient(90deg, #ff28b4, #602bca);
+  background-clip: text;
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+}
+
+.landing-title .highlight {
+  color: #ff4dca;
+}
+
+.landing-title p {
+  font-size: 14px;
+  color: #6c3fc7;
+  text-align: center;
+  margin-bottom: 16px;
+}
+
+.stamps-section {
+  position: relative;
+  margin: 48px 0 32px 0;
+  display: flex;
+  justify-content: center;
+}
+
+.stamps-grid {
+  display: grid;
+  grid-template-columns: 80px 40px 80px;
+  grid-template-rows: 100px 100px 100px;
+  justify-items: center;
+  align-items: center;
+  position: relative;
+  z-index: 2;
+}
+
+.connector-svg {
+  width: 100%;
+  height: 100%;
+  object-fit: contain;
+}
+
+.line-connector {
+  width: 100%;
+  height: 100%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.curve-connector {
+  width: 100%;
+  height: 100%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  position: absolute;
+  z-index: 1;
+}
+
+.right-curve {
+  top: 100%;
+  right: -55px;
+  transform: translateY(-50%);
+}
+
+.left-curve {
+  top: 100%;
+  left: -20px;
+  transform: translateY(-30%);
+}
+
+.stamp-circle {
+  width: auto;
+  height: auto;
+  min-width: 100px;
+  min-height: 100px;
+  border-radius: 50%;
+  background-repeat: no-repeat;
+  background-position: center center;
+  background-size: contain;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  aspect-ratio: 1;
+}
+
+.stamp-svg {
+  width: 100%;
+  height: 100%;
+  object-fit: contain;
+  max-width: 100px;
+  max-height: 100px;
+  transform: scale(1);
+  transition: all 1.4s cubic-bezier(0.23, 1, 0.32, 1);
+  position: relative;
+  z-index: 2;
+}
+
+.stamp-svg.big-stun {
+  transform: scale(1.4);
+  transition: none;
+  z-index: 10;
+}
+
+.stamp-svg.big-to-small {
+  transform: scale(1);
+  transition: all 1.4s cubic-bezier(0.23, 1, 0.32, 1);
+  z-index: 10;
+}
+
+.stamp-connector {
+  position: absolute;
+  left: 0;
+  top: 0;
+  z-index: 1;
+  pointer-events: none;
+}
+
+.redeem-btn {
+  width: 168px;
+  padding: 12px 0;
+  background: linear-gradient(#f3d426, #e99917, #f2bb15);
+  border: none;
+  border-radius: 24px;
+  font-size: 18px;
+  font-weight: 700;
+  color: #fff;
+  margin: 16px 0 8px 0;
+  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.08);
+  cursor: pointer;
+  transition: background 0.2s;
+  box-shadow: 0 4px 8px 0 rgba(126, 106, 216, 0.8),
+    0 -4px 10px 0 rgba(255, 255, 255, 0.4) inset,
+    -2px 0 10px 0 rgba(255, 255, 255, 0.4) inset,
+    2px 0 10px 0 rgba(255, 255, 255, 0.25) inset;
+}
+
+.redeem-btn:disabled {
+  color: #e0e0e0;
+  background: linear-gradient(#f3d426, #e99917, #f2bb15);
+  opacity: 0.5;
+  cursor: not-allowed;
+}
+
+.buttongroup {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 10px;
+}
+
+.footer {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 70px;
+}
+
+.stamp-count {
+  text-align: center;
+  font-size: 14px;
+  color: #6c3fc7;
+  margin-bottom: 8px;
+}
+
+.how-to-link {
+  display: block;
+  text-align: center;
+  color: #6c3fc7;
+  font-size: 14px;
+  text-decoration: underline;
+  margin-bottom: 0;
+  font-weight: 700 !important;
+}
+
+.text {
+  font-size: 14px;
+  color: #454546 !important;
+  font-weight: 400 !important;
+  margin-bottom: 8px;
+}
+
+/* Modal Styles */
+.modal-overlay {
+  position: fixed;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background: rgba(0, 0, 0, 0.8);
+  z-index: 1000;
+  display: flex;
+  align-items: flex-end;
+  justify-content: center;
+  opacity: 0;
+  transition: opacity 0.3s ease-out;
+  background-size: cover;
+  width: 100%;
+}
+
+/* Centered modal overlay for stamp collection */
+.modal-overlay.centered {
+  align-items: center;
+}
+
+.modal-overlay.show {
+  opacity: 1;
+}
+
+.modal-content {
+  background: white;
+  width: 100%;
+  margin: 0 auto;
+  border-radius: 20px 20px 0 0;
+  padding: 16px 32px 16px 32px;
+  position: relative;
+  transform: translateY(100%);
+  transition: transform 0.3s ease-out;
+}
+
+.modal-content.show {
+  transform: translateY(0);
+}
+
+.modal-header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-bottom: 8px;
+}
+
+.modal-title {
+  color: #3c009c;
+  margin: 0;
+}
+
+.modal-close {
+  display: flex;
+  justify-content: flex-end;
+}
+
+.modal-close-btn {
+  background: none;
+  border: none;
+  font-size: 24px;
+  color: #1d1d1d;
+  cursor: pointer;
+  padding: 0;
+  width: 24px;
+  height: 24px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.modal-body {
+  margin-bottom: 24px;
+}
+
+.instructions-html {
+  text-align: left;
+  color: #1d1d1d;
+  margin-bottom: 16px;
+}
+
+.instructions-html,
+.instructions-html * {
+  font-size: 12px;
+  line-height: 1.4;
+}
+
+.instructions-html h1,
+.instructions-html h2,
+.instructions-html h3,
+.instructions-html h4,
+.instructions-html h5,
+.instructions-html h6 {
+  font-size: 12px;
+  font-weight: 600;
+  margin: 0;
+}
+
+.instructions-html p {
+  margin: 0;
+}
+
+.instructions-html ol {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+  counter-reset: step-counter;
+}
+
+.instructions-html li {
+  counter-increment: step-counter;
+  padding-left: 28px;
+  position: relative;
+  margin: 0;
+}
+
+.instructions-html ul {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+}
+
+.instructions-html ul li {
+  position: relative;
+  padding-left: 16px;
+}
+
+.instructions-html ul li::before {
+  content: "•";
+  position: absolute;
+  left: 0;
+  top: 0;
+  color: #1d1d1d;
+}
+
+.instructions-html li p {
+  margin: 0;
+}
+
+.instructions-html li::before {
+  content: counter(step-counter) ".";
+  position: absolute;
+  left: 0;
+  top: 0;
+  color: #1d1d1d;
+  font-weight: 600;
+}
+
+.instructions-list {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+  counter-reset: step-counter;
+  padding-bottom: 12px;
+}
+
+.instructions-list li {
+  counter-increment: step-counter;
+  padding-left: 24px;
+  position: relative;
+  color: #1d1d1d;
+  text-align: left;
+}
+
+.instructions-list li::before {
+  content: counter(step-counter) ".";
+  position: absolute;
+  left: 0;
+  top: 0;
+  color: #1d1d1d;
+}
+
+.terms-section {
+  border-top: 1px solid #e0e0e0;
+  padding-top: 12px;
+}
+
+.terms-list {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+  text-align: left;
+  display: flex;
+  flex-direction: column;
+  gap: 4px;
+}
+
+.terms-list li {
+  padding-left: 16px;
+  position: relative;
+  color: #454546;
+}
+
+.terms-list li::before {
+  content: "•";
+  position: absolute;
+  left: 0;
+  top: 0;
+  color: #454546;
+}
+
+/* Stamp Collected Modal Styles */
+.stamp-collected-modal {
+  background: white;
+  width: 100%;
+  max-width: 294px;
+  border-radius: 16px;
+  padding: 20px 16px;
+  position: relative;
+  text-align: center;
+}
+
+.stamp-collected-content {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  gap: 16px;
+  text-align: center;
+}
+
+.stamp-collected-header {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  gap: 12px;
+  padding-bottom: 16px;
+}
+
+.stamp-collected-image {
+  width: 90px;
+  height: 90px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.stamp-collected-image img {
+  width: 100%;
+  height: 100%;
+  object-fit: contain;
+}
+
+.reward-stamp-collected-image {
+  width: 147px;
+  height: 114x;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.reward-stamp-collected-image img {
+  width: 100%;
+  height: 100%;
+  object-fit: contain;
+}
+
+.stamp-collected-text {
+  color: #454546;
+}
+
+.stamp-collected-text-semibold {
+  color: #454546;
+  font-weight: 600;
+}
+
+.stamp-collected-btn {
+  width: 100%;
+  height: 48px;
+  padding: 12px 24px;
+  background: #7961fe;
+  border: none;
+  border-radius: 50px;
+  font-size: 18px;
+  font-weight: 800;
+  color: white;
+  margin-top: 16px;
+  cursor: pointer;
+  transition: all 0.2s;
+}
+
+/* QR Code Modal Styles */
+.qr-modal {
+  background: url("../public/svg/Membership-modal-bg.svg") no-repeat center center;
+  background-size: cover;
+  border-radius: 24px;
+  width: 90%;
+  max-width: 294px;
+  padding: 32px 20px;
+  position: relative;
+  text-align: center;
+  box-shadow: 0 8px 32px rgba(0, 0, 0, 0.15);
+  cursor: pointer;
+  transition: transform 0.2s ease;
+}
+
+.qr-close-btn {
+  position: absolute;
+  top: 16px;
+  right: 16px;
+  z-index: 10;
+}
+
+.qr-modal-content {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 24px;
+  padding-top: 12px;
+}
+
+.qr-modal-title {
+  color: #333;
+  margin: 0;
+  font-weight: 400 !important;
+}
+
+.qr-code-container {
+  position: relative;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.qr-code {
+  position: relative;
+  border-radius: 12px;
+  overflow: hidden;
+  box-shadow: 0 4px 16px rgba(0, 0, 0, 0.1);
+}
+
+.qr-avatar {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  z-index: 2;
+}
+
+.avatar-circle {
+  width: 40px;
+  height: 40px;
+  border-radius: 50%;
+  background: white;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.15);
+  font-size: 20px;
+}
+
+.qr-username {
+  font-size: 18px;
+  font-weight: 600;
+  color: #333;
+  margin: 0;
+}
+
+.stamp-collected-btn:hover {
+  transform: translateY(-1px);
+  box-shadow: 0 4px 12px rgba(139, 92, 246, 0.3);
+}
+
+.reward-modal-content {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 20px;
+}
+
