@@ -140,7 +140,7 @@
 
 .landing-bg {
   min-height: 100vh;
-  background: url("../public/images/stamp collect-background.png") no-repeat center center;
+  background: url("/images/stamp collect-background.png") no-repeat center center;
   background-size: cover;
   display: flex;
   justify-content: center;
@@ -654,7 +654,7 @@
 
 /* QR Code Modal Styles */
 .qr-modal {
-  background: url("../public/svg/Membership-modal-bg.svg") no-repeat center center;
+  background: url("/svg/Membership-modal-bg.svg") no-repeat center center;
   background-size: cover;
   border-radius: 24px;
   width: 90%;

@@ -1,0 +1,11 @@
+<!DOCTYPE html><html lang=en><head><meta charset=utf-8><meta name=viewport content="width=device-width,initial-scale=1,maximum-scale=1,user-scalable=no,viewport-fit=cover"><meta name=theme-color content=#7961fe><meta name=description content="Collect stamps from merchants and redeem rewards!"><meta name=mobile-web-app-capable content=yes><meta name=apple-mobile-web-app-capable content=yes><meta name=apple-mobile-web-app-status-bar-style content=black-translucent><meta name=apple-mobile-web-app-title content="Stamp Collect"><link rel=apple-touch-icon href=./icons/icon.svg><link rel=manifest href=./manifest.json><link rel=icon type=image/svg+xml href=./icons/icon.svg><title>Stamp Collect</title><link rel=preconnect href=https://fonts.gstatic.com crossorigin><script defer=defer src=./bundle.js></script></head><body><noscript>You need to enable JavaScript to run this app.</noscript><div id=root></div><script>if ('serviceWorker' in navigator) {
+        window.addEventListener('load', function() {
+          navigator.serviceWorker.register('./sw.js')
+            .then(function(registration) {
+              console.log('✅ SW registered:', registration.scope);
+            })
+            .catch(function(error) {
+              console.log('❌ SW registration failed:', error);
+            });
+        });
+      }</script></body></html>

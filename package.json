@@ -2,11 +2,13 @@
   "name": "stamp-collect-miniapp",
   "version": "1.0.0",
   "private": true,
-  "description": "Stamp Collection Mini App - Static Demo Version",
+  "description": "Stamp Collection PWA - Collect stamps and redeem rewards",
   "main": "src/index.tsx",
   "scripts": {
     "dev": "webpack serve --mode development --port 3000",
     "start": "webpack serve --mode development --port 3000",
+    "clean": "rm -rf bundle.js bundle.js.LICENSE.txt *.ttf svg images icons manifest.json sw.js",
+    "prebuild": "npm run clean",
     "build": "webpack --mode production"
   },
   "dependencies": {
@@ -21,6 +23,7 @@
     "@types/qrcode": "^1.5.5",
     "@types/react": "^19.0.0",
     "@types/react-dom": "^19.0.0",
+    "copy-webpack-plugin": "^12.0.2",
     "css-loader": "^7.1.2",
     "html-webpack-plugin": "^5.5.3",
     "sass": "^1.90.0",
