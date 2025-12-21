@@ -1,41 +1,127 @@
 <svg width="393" height="852" viewBox="0 0 393 852" fill="none" xmlns="http://www.w3.org/2000/svg">
-<g clip-path="url(#clip0_885_14390)">
-<rect width="393" height="852" fill="white"/>
-<g opacity="0.4" filter="url(#filter0_f_885_14390)">
-<circle cx="411.659" cy="229" r="90" fill="#7924FD" fill-opacity="0.8"/>
-</g>
-<g opacity="0.4" filter="url(#filter1_f_885_14390)">
-<circle cx="-9.34082" cy="494" r="99" fill="#5E5AFF" fill-opacity="0.8"/>
-</g>
-<g opacity="0.4" filter="url(#filter2_f_885_14390)">
-<circle cx="411.659" cy="229" r="90" fill="#7924FD" fill-opacity="0.8"/>
-</g>
-<g opacity="0.4" filter="url(#filter3_f_885_14390)">
-<circle cx="-9.34082" cy="494" r="99" fill="#5E5AFF" fill-opacity="0.8"/>
-</g>
+<g clip-path="url(#clip0_287_20108)">
+<rect width="393" height="852" fill="#FFFDF9"/>
+<line x1="6.4043" y1="-87.7876" x2="6.40425" y2="939.212" stroke="#F3F3F3"/>
+<line x1="17.5962" y1="-87.7876" x2="17.5961" y2="939.212" stroke="#F3F3F3"/>
+<line x1="28.7876" y1="-87.7876" x2="28.7875" y2="939.212" stroke="#F3F3F3"/>
+<line x1="39.9795" y1="-87.7876" x2="39.9794" y2="939.212" stroke="#F3F3F3"/>
+<line x1="51.1709" y1="-87.7876" x2="51.1708" y2="939.212" stroke="#F3F3F3"/>
+<line x1="62.3628" y1="-87.7876" x2="62.3627" y2="939.212" stroke="#F3F3F3"/>
+<line x1="73.5547" y1="-87.7876" x2="73.5546" y2="939.212" stroke="#F3F3F3"/>
+<line x1="84.7461" y1="-87.7876" x2="84.746" y2="939.212" stroke="#F3F3F3"/>
+<line x1="95.938" y1="-87.7876" x2="95.9379" y2="939.212" stroke="#F3F3F3"/>
+<line x1="107.129" y1="-87.7876" x2="107.129" y2="939.212" stroke="#F3F3F3"/>
+<line x1="118.321" y1="-87.7876" x2="118.321" y2="939.212" stroke="#F3F3F3"/>
+<line x1="129.513" y1="-87.7876" x2="129.513" y2="939.212" stroke="#F3F3F3"/>
+<line x1="140.705" y1="-87.7876" x2="140.705" y2="939.212" stroke="#F3F3F3"/>
+<line x1="151.897" y1="-87.7876" x2="151.897" y2="939.212" stroke="#F3F3F3"/>
+<line x1="163.088" y1="-87.7876" x2="163.088" y2="939.212" stroke="#F3F3F3"/>
+<line x1="174.28" y1="-87.7876" x2="174.28" y2="939.212" stroke="#F3F3F3"/>
+<line x1="185.472" y1="-87.7876" x2="185.472" y2="939.212" stroke="#F3F3F3"/>
+<line x1="196.664" y1="-87.7876" x2="196.664" y2="939.212" stroke="#F3F3F3"/>
+<line x1="207.855" y1="-87.7876" x2="207.855" y2="939.212" stroke="#F3F3F3"/>
+<line x1="219.047" y1="-87.7876" x2="219.047" y2="939.212" stroke="#F3F3F3"/>
+<line x1="230.239" y1="-87.7876" x2="230.239" y2="939.212" stroke="#F3F3F3"/>
+<line x1="241.431" y1="-87.7876" x2="241.431" y2="939.212" stroke="#F3F3F3"/>
+<line x1="252.623" y1="-87.7876" x2="252.623" y2="939.212" stroke="#F3F3F3"/>
+<line x1="263.814" y1="-87.7876" x2="263.814" y2="939.212" stroke="#F3F3F3"/>
+<line x1="275.006" y1="-87.7876" x2="275.006" y2="939.212" stroke="#F3F3F3"/>
+<line x1="286.197" y1="-87.7876" x2="286.197" y2="939.212" stroke="#F3F3F3"/>
+<line x1="297.389" y1="-87.7876" x2="297.389" y2="939.212" stroke="#F3F3F3"/>
+<line x1="308.581" y1="-87.7876" x2="308.581" y2="939.212" stroke="#F3F3F3"/>
+<line x1="319.772" y1="-87.7876" x2="319.772" y2="939.212" stroke="#F3F3F3"/>
+<line x1="330.964" y1="-87.7876" x2="330.964" y2="939.212" stroke="#F3F3F3"/>
+<line x1="342.156" y1="-87.7876" x2="342.156" y2="939.212" stroke="#F3F3F3"/>
+<line x1="353.348" y1="-87.7876" x2="353.348" y2="939.212" stroke="#F3F3F3"/>
+<line x1="364.54" y1="-87.7876" x2="364.539" y2="939.212" stroke="#F3F3F3"/>
+<line x1="375.731" y1="-87.7876" x2="375.731" y2="939.212" stroke="#F3F3F3"/>
+<line x1="432.57" y1="1.6189" x2="-40.2432" y2="1.61888" stroke="#F3F3F3"/>
+<line x1="432.57" y1="11.9434" x2="-40.2432" y2="11.9433" stroke="#F3F3F3"/>
+<line x1="432.57" y1="22.2678" x2="-40.2432" y2="22.2678" stroke="#F3F3F3"/>
+<line x1="432.57" y1="32.5923" x2="-40.2432" y2="32.5923" stroke="#F3F3F3"/>
+<line x1="432.57" y1="42.9165" x2="-40.2432" y2="42.9165" stroke="#F3F3F3"/>
+<line x1="432.57" y1="53.241" x2="-40.2432" y2="53.2409" stroke="#F3F3F3"/>
+<line x1="432.57" y1="63.5652" x2="-40.2432" y2="63.5652" stroke="#F3F3F3"/>
+<line x1="432.57" y1="73.8896" x2="-40.2432" y2="73.8896" stroke="#F3F3F3"/>
+<line x1="432.57" y1="84.2141" x2="-40.2432" y2="84.2141" stroke="#F3F3F3"/>
+<line x1="432.57" y1="94.5386" x2="-40.2432" y2="94.5386" stroke="#F3F3F3"/>
+<line x1="432.57" y1="104.863" x2="-40.2432" y2="104.863" stroke="#F3F3F3"/>
+<line x1="432.57" y1="115.188" x2="-40.2432" y2="115.187" stroke="#F3F3F3"/>
+<line x1="432.57" y1="125.512" x2="-40.2432" y2="125.512" stroke="#F3F3F3"/>
+<line x1="432.57" y1="135.836" x2="-40.2432" y2="135.836" stroke="#F3F3F3"/>
+<line x1="432.57" y1="146.161" x2="-40.2432" y2="146.161" stroke="#F3F3F3"/>
+<line x1="432.57" y1="156.485" x2="-40.2432" y2="156.485" stroke="#F3F3F3"/>
+<line x1="432.57" y1="166.81" x2="-40.2432" y2="166.81" stroke="#F3F3F3"/>
+<line x1="432.57" y1="177.134" x2="-40.2432" y2="177.134" stroke="#F3F3F3"/>
+<line x1="432.57" y1="187.459" x2="-40.2432" y2="187.459" stroke="#F3F3F3"/>
+<line x1="432.57" y1="197.783" x2="-40.2432" y2="197.783" stroke="#F3F3F3"/>
+<line x1="432.57" y1="208.108" x2="-40.2432" y2="208.108" stroke="#F3F3F3"/>
+<line x1="432.57" y1="218.432" x2="-40.2432" y2="218.432" stroke="#F3F3F3"/>
+<line x1="432.57" y1="228.757" x2="-40.2432" y2="228.757" stroke="#F3F3F3"/>
+<line x1="432.57" y1="239.081" x2="-40.2432" y2="239.081" stroke="#F3F3F3"/>
+<line x1="432.57" y1="249.406" x2="-40.2432" y2="249.406" stroke="#F3F3F3"/>
+<line x1="432.57" y1="259.73" x2="-40.2432" y2="259.73" stroke="#F3F3F3"/>
+<line x1="432.57" y1="270.054" x2="-40.2432" y2="270.054" stroke="#F3F3F3"/>
+<line x1="432.57" y1="280.379" x2="-40.2432" y2="280.379" stroke="#F3F3F3"/>
+<line x1="432.57" y1="290.703" x2="-40.2432" y2="290.703" stroke="#F3F3F3"/>
+<line x1="432.57" y1="300.953" x2="-40.2432" y2="300.953" stroke="#F3F3F3"/>
+<line x1="432.57" y1="310.814" x2="-40.2432" y2="310.814" stroke="#F3F3F3"/>
+<line x1="432.57" y1="320.675" x2="-40.2432" y2="320.675" stroke="#F3F3F3"/>
+<line x1="432.57" y1="330.537" x2="-40.2432" y2="330.537" stroke="#F3F3F3"/>
+<line x1="432.57" y1="340.397" x2="-40.2432" y2="340.397" stroke="#F3F3F3"/>
+<line x1="432.57" y1="350.259" x2="-40.2432" y2="350.259" stroke="#F3F3F3"/>
+<line x1="432.57" y1="360.12" x2="-40.2432" y2="360.12" stroke="#F3F3F3"/>
+<line x1="432.57" y1="369.981" x2="-40.2432" y2="369.981" stroke="#F3F3F3"/>
+<line x1="432.57" y1="379.842" x2="-40.2432" y2="379.842" stroke="#F3F3F3"/>
+<line x1="432.57" y1="389.703" x2="-40.2432" y2="389.703" stroke="#F3F3F3"/>
+<line x1="432.57" y1="399.564" x2="-40.2432" y2="399.564" stroke="#F3F3F3"/>
+<line x1="432.57" y1="409.426" x2="-40.2432" y2="409.426" stroke="#F3F3F3"/>
+<line x1="432.57" y1="419.287" x2="-40.2432" y2="419.287" stroke="#F3F3F3"/>
+<line x1="432.57" y1="429.147" x2="-40.2432" y2="429.147" stroke="#F3F3F3"/>
+<line x1="432.57" y1="439.008" x2="-40.2432" y2="439.008" stroke="#F3F3F3"/>
+<line x1="432.57" y1="448.869" x2="-40.2432" y2="448.869" stroke="#F3F3F3"/>
+<line x1="432.57" y1="458.73" x2="-40.2432" y2="458.73" stroke="#F3F3F3"/>
+<line x1="432.57" y1="468.591" x2="-40.2432" y2="468.591" stroke="#F3F3F3"/>
+<line x1="432.57" y1="478.452" x2="-40.2432" y2="478.452" stroke="#F3F3F3"/>
+<line x1="432.57" y1="488.313" x2="-40.2432" y2="488.313" stroke="#F3F3F3"/>
+<line x1="432.57" y1="498.653" x2="-40.2432" y2="498.653" stroke="#F3F3F3"/>
+<line x1="432.57" y1="508.994" x2="-40.2432" y2="508.994" stroke="#F3F3F3"/>
+<line x1="432.57" y1="519.333" x2="-40.2432" y2="519.333" stroke="#F3F3F3"/>
+<line x1="432.57" y1="529.674" x2="-40.2432" y2="529.674" stroke="#F3F3F3"/>
+<line x1="432.57" y1="540.014" x2="-40.2432" y2="540.014" stroke="#F3F3F3"/>
+<line x1="432.57" y1="550.354" x2="-40.2432" y2="550.354" stroke="#F3F3F3"/>
+<line x1="432.57" y1="560.694" x2="-40.2432" y2="560.694" stroke="#F3F3F3"/>
+<line x1="432.57" y1="571.034" x2="-40.2432" y2="571.034" stroke="#F3F3F3"/>
+<line x1="432.57" y1="581.374" x2="-40.2432" y2="581.374" stroke="#F3F3F3"/>
+<line x1="432.57" y1="591.714" x2="-40.2432" y2="591.714" stroke="#F3F3F3"/>
+<line x1="432.57" y1="602.054" x2="-40.2432" y2="602.054" stroke="#F3F3F3"/>
+<line x1="432.57" y1="612.394" x2="-40.2432" y2="612.394" stroke="#F3F3F3"/>
+<line x1="432.57" y1="622.734" x2="-40.2432" y2="622.734" stroke="#F3F3F3"/>
+<line x1="432.57" y1="633.074" x2="-40.2432" y2="633.074" stroke="#F3F3F3"/>
+<line x1="432.57" y1="643.414" x2="-40.2432" y2="643.414" stroke="#F3F3F3"/>
+<line x1="432.57" y1="653.754" x2="-40.2432" y2="653.754" stroke="#F3F3F3"/>
+<line x1="432.57" y1="664.094" x2="-40.2432" y2="664.094" stroke="#F3F3F3"/>
+<line x1="432.57" y1="674.435" x2="-40.2432" y2="674.435" stroke="#F3F3F3"/>
+<line x1="432.57" y1="684.774" x2="-40.2432" y2="684.774" stroke="#F3F3F3"/>
+<line x1="432.57" y1="695.115" x2="-40.2432" y2="695.115" stroke="#F3F3F3"/>
+<line x1="432.57" y1="705.115" x2="-40.2432" y2="705.115" stroke="#F3F3F3"/>
+<line x1="432.57" y1="715.115" x2="-40.2432" y2="715.115" stroke="#F3F3F3"/>
+<line x1="432.57" y1="725.115" x2="-40.2432" y2="725.115" stroke="#F3F3F3"/>
+<line x1="432.57" y1="735.117" x2="-40.2432" y2="735.117" stroke="#F3F3F3"/>
+<line x1="432.57" y1="745.119" x2="-40.2432" y2="745.119" stroke="#F3F3F3"/>
+<line x1="432.57" y1="755.121" x2="-40.2432" y2="755.121" stroke="#F3F3F3"/>
+<line x1="432.57" y1="765.123" x2="-40.2432" y2="765.123" stroke="#F3F3F3"/>
+<line x1="432.57" y1="775.125" x2="-40.2432" y2="775.125" stroke="#F3F3F3"/>
+<line x1="432.57" y1="785.126" x2="-40.2432" y2="785.126" stroke="#F3F3F3"/>
+<line x1="432.57" y1="795.128" x2="-40.2432" y2="795.128" stroke="#F3F3F3"/>
+<line x1="432.57" y1="805.13" x2="-40.2432" y2="805.13" stroke="#F3F3F3"/>
+<line x1="432.57" y1="815.132" x2="-40.2432" y2="815.132" stroke="#F3F3F3"/>
+<line x1="432.57" y1="825.134" x2="-40.2432" y2="825.134" stroke="#F3F3F3"/>
+<line x1="432.57" y1="835.136" x2="-40.2432" y2="835.136" stroke="#F3F3F3"/>
+<line x1="432.57" y1="845.138" x2="-40.2432" y2="845.138" stroke="#F3F3F3"/>
 </g>
 <defs>
-<filter id="filter0_f_885_14390" x="21.6592" y="-161" width="780" height="780" filterUnits="userSpaceOnUse" color-interpolation-filters="sRGB">
-<feFlood flood-opacity="0" result="BackgroundImageFix"/>
-<feBlend mode="normal" in="SourceGraphic" in2="BackgroundImageFix" result="shape"/>
-<feGaussianBlur stdDeviation="150" result="effect1_foregroundBlur_885_14390"/>
-</filter>
-<filter id="filter1_f_885_14390" x="-408.341" y="95" width="798" height="798" filterUnits="userSpaceOnUse" color-interpolation-filters="sRGB">
-<feFlood flood-opacity="0" result="BackgroundImageFix"/>
-<feBlend mode="normal" in="SourceGraphic" in2="BackgroundImageFix" result="shape"/>
-<feGaussianBlur stdDeviation="150" result="effect1_foregroundBlur_885_14390"/>
-</filter>
-<filter id="filter2_f_885_14390" x="21.6592" y="-161" width="780" height="780" filterUnits="userSpaceOnUse" color-interpolation-filters="sRGB">
-<feFlood flood-opacity="0" result="BackgroundImageFix"/>
-<feBlend mode="normal" in="SourceGraphic" in2="BackgroundImageFix" result="shape"/>
-<feGaussianBlur stdDeviation="150" result="effect1_foregroundBlur_885_14390"/>
-</filter>
-<filter id="filter3_f_885_14390" x="-408.341" y="95" width="798" height="798" filterUnits="userSpaceOnUse" color-interpolation-filters="sRGB">
-<feFlood flood-opacity="0" result="BackgroundImageFix"/>
-<feBlend mode="normal" in="SourceGraphic" in2="BackgroundImageFix" result="shape"/>
-<feGaussianBlur stdDeviation="150" result="effect1_foregroundBlur_885_14390"/>
-</filter>
-<clipPath id="clip0_885_14390">
+<clipPath id="clip0_287_20108">
 <rect width="393" height="852" fill="white"/>
 </clipPath>
 </defs>

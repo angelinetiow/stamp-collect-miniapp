@@ -140,7 +140,10 @@
 
 .landing-bg {
   min-height: 100vh;
-  background: url("images/stamp collect-background.png") no-repeat center center;
+  background-color: #FFFDF9;
+  background-image: url("bg-image.svg");
+  background-repeat: no-repeat;
+  background-position: center center;
   background-size: cover;
   display: flex;
   justify-content: center;
@@ -154,40 +157,72 @@
 }
 
 .landing-container {
-  padding: 32px 24px 24px 24px;
-  width: 420px;
+  padding: 0 24px 24px 24px;
+  width: 100%;
+  max-width: 390px;
   position: relative;
 }
 
 .landing-header {
   display: flex;
-  align-items: left;
-  justify-content: left;
-  position: relative;
+  align-items: center;
+  justify-content: center;
+  position: sticky;
+  top: 0;
+  background-color: #FFFFFF;
+  padding: 16px;
+  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.08);
+  z-index: 100;
+  margin-left: calc(-50vw + 50%);
+  margin-right: calc(-50vw + 50%);
+  width: 100vw;
 }
 
 .back-btn {
   background: none;
   border: none;
-  font-size: 24px;
   cursor: pointer;
-  color: #333;
+  color: #1D1D1D;
   position: absolute;
-  left: 0;
+  left: 16px;
+}
+
+.title-banner {
+  background-color: #0A486E;
+  border-radius: 0 0 50% 50% / 0 0 100% 100%;
+  padding: 16px 32px 24px 32px;
+  margin-left: calc(-50vw + 50%);
+  margin-right: calc(-50vw + 50%);
+  margin-bottom: 16px;
+  width: 100vw;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.banner-text {
+  color: #FFFFFF;
+  font-size: 24px;
+  font-weight: 700;
+  letter-spacing: 1px;
+}
+
+.landing-title {
+  text-align: center;
 }
 
 .landing-title h2 {
-  font-size: 20px;
+  font-size: 24px;
   font-weight: 700;
   margin-bottom: 4px;
   text-align: center;
-  color: #37276c;
+  color: #FFFFFF;
   line-height: 1.15;
 }
 
 .landing-title .gradient-text {
-  font-size: 22.5px;
-  background: linear-gradient(90deg, #ff28b4, #602bca);
+  font-size: 20px;
+  background: linear-gradient(90deg, #5B40BC, #866AE8, #5983FB);
   background-clip: text;
   -webkit-background-clip: text;
   -webkit-text-fill-color: transparent;
@@ -211,25 +246,63 @@
   justify-content: center;
 }
 
+.stamps-section::before {
+  content: '';
+  position: absolute;
+  top: -57px;
+  right: calc(-50vw + 50% - 15px); /* Stick to right viewport edge */
+  width: 124px;
+  height: 124px;
+  background-image: url('svg/background stamp.svg');
+  background-size: contain;
+  background-repeat: no-repeat;
+  background-position: center;
+  z-index: 1; /* Below stamps (stamps have z-index: 2) */
+  pointer-events: none;
+}
+
 .stamps-grid {
-  display: grid;
-  grid-template-columns: 80px 40px 80px;
-  grid-template-rows: 100px 100px 100px;
-  justify-items: center;
+  display: flex;
+  flex-direction: column;
   align-items: center;
   position: relative;
   z-index: 2;
+}
+
+.stamps-row {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  height: 100px;
+  position: relative;
+}
+
+.stamps-row-1 {
+  /* Row 1: 2 stamps, centered */
+}
+
+.stamps-row-2 {
+  /* Row 2: 3 stamps, centered */
+}
+
+.stamps-row-3 {
+  /* Row 3: 2 stamps, centered */
 }
 
 .connector-svg {
   width: 100%;
   height: 100%;
   object-fit: contain;
+  filter: drop-shadow(0px 5px 4px rgba(187, 187, 187, 0.4));
+}
+
+.line-connector .connector-svg {
+  transform: scaleY(1.5);
 }
 
 .line-connector {
-  width: 100%;
-  height: 100%;
+  width: 30px;
+  height: 30px;
   display: flex;
   align-items: center;
   justify-content: center;
@@ -253,15 +326,13 @@
 
 .left-curve {
   top: 100%;
-  left: -20px;
+  left: -5px;
   transform: translateY(-30%);
 }
 
 .stamp-circle {
-  width: auto;
-  height: auto;
-  min-width: 100px;
-  min-height: 100px;
+  width: 80px;
+  height: 80px;
   border-radius: 50%;
   background-repeat: no-repeat;
   background-position: center center;
@@ -269,15 +340,14 @@
   display: flex;
   justify-content: center;
   align-items: center;
-  aspect-ratio: 1;
 }
 
 .stamp-svg {
   width: 100%;
   height: 100%;
   object-fit: contain;
-  max-width: 100px;
-  max-height: 100px;
+  max-width: 80px;
+  max-height: 80px;
   transform: scale(1);
   transition: all 1.4s cubic-bezier(0.23, 1, 0.32, 1);
   position: relative;
@@ -304,28 +374,27 @@
   pointer-events: none;
 }
 
-.redeem-btn {
-  width: 168px;
-  padding: 12px 0;
+.redeem-btn.heading4 {
+  width: 208px;
+  padding: 12px 16px;
   background: linear-gradient(#f3d426, #e99917, #f2bb15);
   border: none;
-  border-radius: 24px;
-  font-size: 18px;
+  border-radius: 12px;
+  font-size: 24px;
   font-weight: 700;
   color: #fff;
-  margin: 16px 0 8px 0;
-  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.08);
   cursor: pointer;
   transition: background 0.2s;
-  box-shadow: 0 4px 8px 0 rgba(126, 106, 216, 0.8),
-    0 -4px 10px 0 rgba(255, 255, 255, 0.4) inset,
-    -2px 0 10px 0 rgba(255, 255, 255, 0.4) inset,
-    2px 0 10px 0 rgba(255, 255, 255, 0.25) inset;
+  box-shadow: 
+    0 4px 8px 0 rgba(205, 205, 205, 0.25),
+    2px 0 10px 0 rgba(255, 255, 255, 0.25) inset,
+    -2px 0 10px 0 rgba(255, 255, 255, 0.25) inset,
+    0 -4px 10px 0 rgba(255, 255, 255, 0.25) inset;
 }
 
-.redeem-btn:disabled {
-  color: #e0e0e0;
-  background: linear-gradient(#f3d426, #e99917, #f2bb15);
+.redeem-btn.heading4:disabled {
+  color: #FFFFFF;
+  background: linear-gradient(#FFD046, #FFB700, #FFD046);
   opacity: 0.5;
   cursor: not-allowed;
 }
@@ -341,7 +410,7 @@
   display: flex;
   flex-direction: column;
   align-items: center;
-  gap: 70px;
+  gap: 40px;
 }
 
 .stamp-count {
@@ -351,14 +420,15 @@
   margin-bottom: 8px;
 }
 
-.how-to-link {
+.how-to-link.body3 {
   display: block;
   text-align: center;
-  color: #6c3fc7;
+  color: #0A486E;
   font-size: 14px;
+  font-weight: 600;
+  line-height: 140%;
   text-decoration: underline;
   margin-bottom: 0;
-  font-weight: 700 !important;
 }
 
 .text {
@@ -418,7 +488,7 @@
 }
 
 .modal-title {
-  color: #3c009c;
+  color: #0A486E;
   margin: 0;
 }
 
@@ -641,7 +711,7 @@
   width: 100%;
   height: 48px;
   padding: 12px 24px;
-  background: #7961fe;
+  background: #0A486E;
   border: none;
   border-radius: 50px;
   font-size: 18px;
@@ -654,38 +724,53 @@
 
 /* QR Code Modal Styles */
 .qr-modal {
-  background: url("svg/Membership-modal-bg.svg") no-repeat center center;
-  background-size: cover;
-  border-radius: 24px;
+  background: #FFFFFF;
+  border-radius: 16px;
   width: 90%;
   max-width: 294px;
-  padding: 32px 20px;
+  padding: 16px 20px 20px 20px;
   position: relative;
   text-align: center;
   box-shadow: 0 8px 32px rgba(0, 0, 0, 0.15);
   cursor: pointer;
-  transition: transform 0.2s ease;
+}
+
+.qr-modal-header {
+  display: flex;
+  justify-content: flex-end;
+  align-items: center;
+  width: 100%;
+  height: 24px;
+  margin-bottom: 8px;
 }
 
 .qr-close-btn {
-  position: absolute;
-  top: 16px;
-  right: 16px;
-  z-index: 10;
+  background: none;
+  border: none;
+  cursor: pointer;
+  font-size: 24px;
+  color: #333;
+  padding: 0;
+  width: 24px;
+  height: 24px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
 }
 
 .qr-modal-content {
   display: flex;
   flex-direction: column;
   align-items: center;
-  gap: 24px;
-  padding-top: 12px;
+  gap: 12px;
 }
 
 .qr-modal-title {
-  color: #333;
+  color: #454546;
   margin: 0;
-  font-weight: 400 !important;
+  font-size: 16px;
+  font-weight: 400;
+  font-family: 'Poppins', sans-serif;
 }
 
 .qr-code-container {
@@ -695,11 +780,16 @@
   align-items: center;
 }
 
+.qr-code-img {
+  width: 210px;
+  height: 210px;
+  object-fit: contain;
+}
+
 .qr-code {
   position: relative;
-  border-radius: 12px;
+  border-radius: 8px;
   overflow: hidden;
-  box-shadow: 0 4px 16px rgba(0, 0, 0, 0.1);
 }
 
 .qr-avatar {
@@ -723,15 +813,18 @@
 }
 
 .qr-username {
-  font-size: 18px;
-  font-weight: 600;
-  color: #333;
+  font-size: 16px;
+  font-weight: 700;
+  color: #0A486E;
   margin: 0;
+  text-transform: uppercase;
+  letter-spacing: 0;
+  font-family: 'Poppins', sans-serif;
 }
 
 .stamp-collected-btn:hover {
   transform: translateY(-1px);
-  box-shadow: 0 4px 12px rgba(139, 92, 246, 0.3);
+  box-shadow: 0 4px 12px rgba(10, 72, 110, 0.3);
 }
 
 .reward-modal-content {
@@ -739,5 +832,475 @@
   flex-direction: column;
   align-items: center;
   gap: 20px;
+}
+
+/* ============================================
+   RESPONSIVE STYLES
+   Base: iPhone 12 Pro (390px width)
+   ============================================ */
+
+/* ============================================
+   RESPONSIVE STYLES
+   Base: iPhone 12 Pro (390px width, 844px height)
+   All scaling is proportional to this base
+   ============================================ */
+
+/* Extra small devices (smaller than 360px) - ratio ~0.92 */
+@media screen and (max-width: 359px) {
+  .landing-container {
+    padding: 0 20px 20px 20px;
+    max-width: 320px;
+  }
+
+  .landing-header {
+    padding: 13px;
+  }
+
+  .back-btn {
+    left: 13px;
+  }
+
+  .title-banner {
+    padding: 13px 26px 20px 26px;
+    margin-bottom: 13px;
+  }
+
+  .stamps-section::before {
+    width: 103px;
+    height: 103px;
+    top: -47px;
+  }
+
+  .banner-text {
+    font-size: 20px; /* 24 * 0.83 */
+  }
+
+  .landing-title h2 {
+    font-size: 20px;
+  }
+
+  .landing-title .gradient-text {
+    font-size: 16px;
+  }
+
+  .landing-title p {
+    font-size: 12px;
+    margin-bottom: 13px;
+  }
+
+  .stamps-section {
+    margin: 40px 0 26px 0;
+  }
+
+  .stamps-row {
+    height: 83px;
+  }
+
+  .stamp-circle {
+    width: 66px;
+    height: 66px;
+  }
+
+  .stamp-svg {
+    max-width: 66px;
+    max-height: 66px;
+  }
+
+  .line-connector {
+    width: 25px;
+    height: 25px;
+  }
+
+  .right-curve {
+    right: -46px;
+  }
+
+  .left-curve {
+    left: -4px;
+  }
+
+  .redeem-btn.heading4 {
+    width: 173px;
+    font-size: 20px;
+    padding: 10px 13px;
+  }
+
+  .stamp-count {
+    font-size: 12px;
+  }
+
+  .how-to-link.body3 {
+    font-size: 12px;
+  }
+
+  .footer {
+    gap: 33px;
+  }
+}
+
+/* Small devices (360px - 389px) - ratio ~0.95 */
+@media screen and (min-width: 360px) and (max-width: 389px) {
+  .landing-container {
+    padding: 0 22px 22px 22px;
+    max-width: 360px;
+  }
+
+  .landing-header {
+    padding: 15px;
+  }
+
+  .back-btn {
+    left: 15px;
+  }
+
+  .title-banner {
+    padding: 15px 30px 23px 30px;
+    margin-bottom: 15px;
+  }
+
+  .stamps-section::before {
+    width: 118px;
+    height: 118px;
+    top: -54px;
+  }
+
+  .banner-text {
+    font-size: 23px;
+  }
+
+  .landing-title h2 {
+    font-size: 23px;
+  }
+
+  .landing-title .gradient-text {
+    font-size: 19px;
+  }
+
+  .stamps-section {
+    margin: 46px 0 30px 0;
+  }
+
+  .stamps-row {
+    height: 95px;
+  }
+
+  .stamp-circle {
+    width: 76px;
+    height: 76px;
+  }
+
+  .stamp-svg {
+    max-width: 76px;
+    max-height: 76px;
+  }
+
+  .line-connector {
+    width: 28px;
+    height: 28px;
+  }
+
+  .right-curve {
+    right: -52px;
+  }
+
+  .redeem-btn.heading4 {
+    width: 198px;
+    font-size: 23px;
+  }
+
+  .footer {
+    gap: 38px;
+  }
+}
+
+/* iPhone 12 Pro base (390px - 413px) - ratio 1.0 (no changes needed) */
+
+/* Larger phones (414px - 430px) - ratio ~1.06 */
+@media screen and (min-width: 414px) and (max-width: 430px) {
+  .landing-container {
+    padding: 0 25px 25px 25px;
+    max-width: 414px;
+  }
+
+  .landing-header {
+    padding: 17px;
+  }
+
+  .back-btn {
+    left: 17px;
+  }
+
+  .title-banner {
+    padding: 17px 34px 25px 34px;
+    margin-bottom: 17px;
+  }
+
+  .stamps-section::before {
+    width: 131px;
+    height: 131px;
+    top: -60px;
+  }
+
+  .banner-text {
+    font-size: 25px;
+  }
+
+  .landing-title h2 {
+    font-size: 25px;
+  }
+
+  .landing-title .gradient-text {
+    font-size: 21px;
+  }
+
+  .landing-title p {
+    margin-bottom: 17px;
+  }
+
+  .stamps-section {
+    margin: 51px 0 34px 0;
+  }
+
+  .stamps-row {
+    height: 106px;
+  }
+
+  .stamp-circle {
+    width: 85px;
+    height: 85px;
+  }
+
+  .stamp-svg {
+    max-width: 85px;
+    max-height: 85px;
+  }
+
+  .line-connector {
+    width: 32px;
+    height: 32px;
+  }
+
+  .right-curve {
+    right: -58px;
+  }
+
+  .redeem-btn.heading4 {
+    width: 220px;
+    font-size: 25px;
+    padding: 13px 17px;
+  }
+
+  .footer {
+    gap: 42px;
+  }
+}
+
+/* Pro Max / Plus phones (431px - 480px) - ratio ~1.15 */
+@media screen and (min-width: 431px) and (max-width: 480px) {
+  .landing-container {
+    padding: 0 28px 28px 28px;
+    max-width: 450px;
+  }
+
+  .landing-header {
+    padding: 18px;
+  }
+
+  .back-btn {
+    left: 18px;
+  }
+
+  .title-banner {
+    padding: 18px 37px 28px 37px;
+    margin-bottom: 18px;
+  }
+
+  .stamps-section::before {
+    width: 143px;
+    height: 143px;
+    top: -66px;
+  }
+
+  .banner-text {
+    font-size: 28px;
+  }
+
+  .landing-title h2 {
+    font-size: 28px;
+  }
+
+  .landing-title .gradient-text {
+    font-size: 23px;
+  }
+
+  .landing-title p {
+    font-size: 16px;
+    margin-bottom: 18px;
+  }
+
+  .stamps-section {
+    margin: 55px 0 37px 0;
+  }
+
+  .stamps-row {
+    height: 115px;
+  }
+
+  .stamp-circle {
+    width: 92px;
+    height: 92px;
+  }
+
+  .stamp-svg {
+    max-width: 92px;
+    max-height: 92px;
+  }
+
+  .line-connector {
+    width: 35px;
+    height: 35px;
+  }
+
+  .right-curve {
+    right: -63px;
+  }
+
+  .redeem-btn.heading4 {
+    width: 239px;
+    font-size: 28px;
+    padding: 14px 18px;
+  }
+
+  .stamp-count {
+    font-size: 16px;
+  }
+
+  .how-to-link.body3 {
+    font-size: 16px;
+  }
+
+  .footer {
+    gap: 46px;
+  }
+}
+
+/* Tablets and larger screens (481px+) - ratio ~1.23 */
+@media screen and (min-width: 481px) {
+  .landing-container {
+    padding: 0 30px 30px 30px;
+    max-width: 480px;
+  }
+
+  .landing-header {
+    padding: 20px;
+  }
+
+  .back-btn {
+    left: 20px;
+  }
+
+  .title-banner {
+    padding: 20px 39px 30px 39px;
+    margin-bottom: 20px;
+  }
+
+  .stamps-section::before {
+    width: 153px;
+    height: 153px;
+    top: -70px;
+  }
+
+  .banner-text {
+    font-size: 30px;
+  }
+
+  .landing-title h2 {
+    font-size: 30px;
+  }
+
+  .landing-title .gradient-text {
+    font-size: 25px;
+  }
+
+  .landing-title p {
+    font-size: 17px;
+    margin-bottom: 20px;
+  }
+
+  .stamps-section {
+    margin: 59px 0 39px 0;
+  }
+
+  .stamps-row {
+    height: 123px;
+  }
+
+  .stamp-circle {
+    width: 98px;
+    height: 98px;
+  }
+
+  .stamp-svg {
+    max-width: 98px;
+    max-height: 98px;
+  }
+
+  .line-connector {
+    width: 37px;
+    height: 37px;
+  }
+
+  .right-curve {
+    right: -68px;
+  }
+
+  .redeem-btn.heading4 {
+    width: 256px;
+    font-size: 30px;
+    padding: 15px 20px;
+  }
+
+  .stamp-count {
+    font-size: 17px;
+  }
+
+  .how-to-link.body3 {
+    font-size: 17px;
+  }
+
+  .footer {
+    gap: 49px;
+  }
+}
+
+/* Height-based adjustments for taller screens */
+@media screen and (min-height: 900px) {
+  .stamps-section {
+    margin-top: 60px;
+    margin-bottom: 45px;
+  }
+
+  .stamps-row {
+    height: 115px;
+  }
+
+  .footer {
+    gap: 50px;
+  }
+}
+
+@media screen and (min-height: 1000px) {
+  .stamps-section {
+    margin-top: 70px;
+    margin-bottom: 50px;
+  }
+
+  .stamps-row {
+    height: 125px;
+  }
+
+  .footer {
+    gap: 60px;
+  }
 }
 

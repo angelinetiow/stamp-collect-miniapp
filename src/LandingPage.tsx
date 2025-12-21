@@ -23,7 +23,7 @@ export const LandingPage: React.FC = () => {
   const [userInfo] = useState<UserInfo>(STATIC_USER);
   
   const handleRedeemClick = () => {
-    if (totalCollected === 5) {
+    if (totalCollected === 7) {
       const wonPrize = selectPrizeByProbability(STATIC_PRIZES);
       
       if (!wonPrize) {
@@ -39,15 +39,15 @@ export const LandingPage: React.FC = () => {
   const closeRewardModal = () => {
     setIsRewardModalOpen(false);
     // Reset stamps after redemption
-    setCollectedStamps([false, false, false, false, false]);
+    setCollectedStamps([false, false, false, false, false, false, false]);
     setSelectedPrize(null);
   };
   
   const [rewardStampStun, setRewardStampStun] = useState(false);
   const [rewardStampShrinking, setRewardStampShrinking] = useState(false);
-  const [storeStampStun, setStoreStampStun] = useState([false, false, false, false]);
-  const [storeStampShrinking, setStoreStampShrinking] = useState([false, false, false, false]);
-  const [collectedStamps, setCollectedStamps] = useState([false, false, false, false, false]);
+  const [storeStampStun, setStoreStampStun] = useState([false, false, false, false, false, false]);
+  const [storeStampShrinking, setStoreStampShrinking] = useState([false, false, false, false, false, false]);
+  const [collectedStamps, setCollectedStamps] = useState([false, false, false, false, false, false, false]);
   const [isInstructionModalOpen, setIsInstructionModalOpen] = useState(false);
   const [showInstructionModal, setShowInstructionModal] = useState(false);
   const [isQRModalOpen, setIsQRModalOpen] = useState(false);
@@ -105,7 +105,7 @@ export const LandingPage: React.FC = () => {
 
   // Collect stamp with animation - simulates stamp collection
   const collectStamp = (stampIndex: number, isRewardStamp: boolean) => {
-    if (stampIndex === 4 || isRewardStamp) {
+    if (stampIndex === 6 || isRewardStamp) {
       // Reward stamp - start animation
       setRewardStampStun(true);
       setTimeout(() => {
@@ -156,7 +156,7 @@ export const LandingPage: React.FC = () => {
   const handleQRDone = () => {
     setIsQRModalOpen(false);
     if (currentStampIndex !== null) {
-      collectStamp(currentStampIndex, currentStampIndex === 4);
+      collectStamp(currentStampIndex, currentStampIndex === 6);
     }
   };
 
@@ -199,137 +199,179 @@ export const LandingPage: React.FC = () => {
     <div className="landing-bg">
       <div className="landing-container">
         <div className="landing-header">
-          <Flex
-            align={"center"}
-            gap={84}
-            style={{ padding: "1.5rem 1rem 3rem 1rem" }}
-          >
-            <IconChevronLeft
-              size={24}
-              color="#1D1D1D"
-              onClick={handleGoBack}
-              style={{ cursor: 'pointer' }}
-            />
-            <h3 className="heading3">Stamp Collect</h3>
-          </Flex>
+          <IconChevronLeft
+            size={24}
+            color="#1D1D1D"
+            onClick={handleGoBack}
+            className="back-btn"
+          />
+          <h3 className="heading3">Stamp Rewards</h3>
         </div>
         <div className="landing-title">
+          <div className="title-banner">
+            <span className="banner-text">VISIT, STAMP, WIN</span>
+          </div>
           <h2 className="heading2">
-            Visit Merchants to Claim <br />
-            <span className="gradient-text">Free Vouchers or Tokens!</span>
+            <span className="gradient-text">Unlock Rewards as You Explore</span>
           </h2>
           <p className="body2 text">Turn your visits into rewards by collecting stamps!</p>
         </div>
         <div className="stamps-section">
           <div className={`stamps-grid stamps-collected-${totalCollected}`}>
-            {/* Row 1: Stamp1 - Line1 - Stamp2 */}
-            <div 
-              className="stamp-circle" 
-              style={{
-                cursor: collectedStamps[0] ? 'default' : 'pointer'
-              }}
-              onClick={() => handleStampClick(0)}
-            >
-              <img 
-                src={`./svg/${collectedStamps[0] || storeStampStun[0] || storeStampShrinking[0] ? 'store stamp-filled' : 'store stamp-default'}.svg`} 
-                alt="Store stamp 1" 
-                className={`stamp-svg${storeStampStun[0] ? ' big-stun' : ''}${storeStampShrinking[0] ? ' big-to-small' : ''}`}
-              />
-            </div>
-            <div className="line-connector">
-              <img 
-                src={`./svg/${totalCollected >= 2 ? 'line-filled' : 'line-default'}.svg`} 
-                alt="line connector" 
-                className="connector-svg"
-              />
-            </div>
-            <div 
-              className="stamp-circle stamp2-container" 
-              style={{
-                position: 'relative',
-                cursor: collectedStamps[1] ? 'default' : 'pointer'
-              }}
-              onClick={() => handleStampClick(1)}
-            >
-              <img 
-                src={`./svg/${collectedStamps[1] || storeStampStun[1] || storeStampShrinking[1] ? 'store stamp-filled' : 'store stamp-default'}.svg`} 
-                alt="Store stamp 2" 
-                className={`stamp-svg${storeStampStun[1] ? ' big-stun' : ''}${storeStampShrinking[1] ? ' big-to-small' : ''}`}
-              />
-              <div className="curve-connector right-curve">
+            {/* Row 1: Stamp1 - Line - Stamp2 */}
+            <div className="stamps-row stamps-row-1">
+              <div 
+                className="stamp-circle" 
+                style={{
+                  cursor: collectedStamps[0] ? 'default' : 'pointer'
+                }}
+                onClick={() => handleStampClick(0)}
+              >
                 <img 
-                  src={`./svg/${totalCollected >= 3 ? 'right curve-filled' : 'right curve-default'}.svg`} 
-                  alt="right curve connector" 
+                  src={`./svg/${collectedStamps[0] || storeStampStun[0] || storeStampShrinking[0] ? 'store stamp-filled' : 'store stamp-default'}.svg`} 
+                  alt="Store stamp 1" 
+                  className={`stamp-svg${storeStampStun[0] ? ' big-stun' : ''}${storeStampShrinking[0] ? ' big-to-small' : ''}`}
+                />
+              </div>
+              <div className="line-connector">
+                <img 
+                  src="./svg/line-default.svg" 
+                  alt="line connector" 
                   className="connector-svg"
+                />
+              </div>
+              <div 
+                className="stamp-circle stamp2-container" 
+                style={{
+                  position: 'relative',
+                  cursor: collectedStamps[1] ? 'default' : 'pointer'
+                }}
+                onClick={() => handleStampClick(1)}
+              >
+                <img 
+                  src={`./svg/${collectedStamps[1] || storeStampStun[1] || storeStampShrinking[1] ? 'store stamp-filled' : 'store stamp-default'}.svg`} 
+                  alt="Store stamp 2" 
+                  className={`stamp-svg${storeStampStun[1] ? ' big-stun' : ''}${storeStampShrinking[1] ? ' big-to-small' : ''}`}
+                />
+                {/* Right curve connecting stamp 2 to stamp 3 */}
+                <div className="curve-connector right-curve">
+                  <img 
+                    src="./svg/right curve-default.svg" 
+                    alt="right curve connector" 
+                    className="connector-svg"
+                  />
+                </div>
+              </div>
+            </div>
+            
+            {/* Row 2: Stamp5 - Line - Stamp4 - Line - Stamp3 */}
+            <div className="stamps-row stamps-row-2">
+              <div 
+                className="stamp-circle stamp5-container" 
+                style={{
+                  position: 'relative',
+                  cursor: collectedStamps[4] ? 'default' : 'pointer'
+                }}
+                onClick={() => handleStampClick(4)}
+              >
+                <img 
+                  src={`./svg/${collectedStamps[4] || storeStampStun[4] || storeStampShrinking[4] ? 'store stamp-filled' : 'store stamp-default'}.svg`} 
+                  alt="Store stamp 5" 
+                  className={`stamp-svg${storeStampStun[4] ? ' big-stun' : ''}${storeStampShrinking[4] ? ' big-to-small' : ''}`}
+                />
+                {/* Left curve connecting stamp 5 to stamp 6 */}
+                <div className="curve-connector left-curve">
+                  <img 
+                    src="./svg/left curve-default.svg" 
+                    alt="left curve connector" 
+                    className="connector-svg"
+                  />
+                </div>
+              </div>
+              <div className="line-connector">
+                <img 
+                  src="./svg/line-default.svg" 
+                  alt="line connector" 
+                  className="connector-svg"
+                />
+              </div>
+              <div 
+                className="stamp-circle" 
+                style={{
+                  cursor: collectedStamps[3] ? 'default' : 'pointer'
+                }}
+                onClick={() => handleStampClick(3)}
+              >
+                <img 
+                  src={`./svg/${collectedStamps[3] || storeStampStun[3] || storeStampShrinking[3] ? 'store stamp-filled' : 'store stamp-default'}.svg`} 
+                  alt="Store stamp 4" 
+                  className={`stamp-svg${storeStampStun[3] ? ' big-stun' : ''}${storeStampShrinking[3] ? ' big-to-small' : ''}`}
+                />
+              </div>
+              <div className="line-connector">
+                <img 
+                  src="./svg/line-default.svg" 
+                  alt="line connector" 
+                  className="connector-svg"
+                />
+              </div>
+              <div 
+                className="stamp-circle" 
+                style={{
+                  cursor: collectedStamps[2] ? 'default' : 'pointer'
+                }}
+                onClick={() => handleStampClick(2)}
+              >
+                <img 
+                  src={`./svg/${collectedStamps[2] || storeStampStun[2] || storeStampShrinking[2] ? 'store stamp-filled' : 'store stamp-default'}.svg`} 
+                  alt="Store stamp 3" 
+                  className={`stamp-svg${storeStampStun[2] ? ' big-stun' : ''}${storeStampShrinking[2] ? ' big-to-small' : ''}`}
                 />
               </div>
             </div>
             
-            {/* Row 2: Stamp4 - Line2 - Stamp3 */}
-            <div 
-              className="stamp-circle stamp4-container" 
-              style={{
-                position: 'relative',
-                cursor: collectedStamps[3] ? 'default' : 'pointer'
-              }}
-              onClick={() => handleStampClick(3)}
-            >
-              <img 
-                src={`./svg/${collectedStamps[3] || storeStampStun[3] || storeStampShrinking[3] ? 'store stamp-filled' : 'store stamp-default'}.svg`} 
-                alt="Store stamp 4" 
-                className={`stamp-svg${storeStampStun[3] ? ' big-stun' : ''}${storeStampShrinking[3] ? ' big-to-small' : ''}`}
-              />
-              <div className="curve-connector left-curve">
+            {/* Row 3: Stamp6 - Line - Stamp7/Reward */}
+            <div className="stamps-row stamps-row-3">
+              <div 
+                className="stamp-circle" 
+                style={{
+                  cursor: collectedStamps[5] ? 'default' : 'pointer'
+                }}
+                onClick={() => handleStampClick(5)}
+              >
                 <img 
-                  src={`./svg/${totalCollected >= 5 ? 'left curve-filled' : 'left curve-default'}.svg`} 
-                  alt="left curve connector" 
+                  src={`./svg/${collectedStamps[5] || storeStampStun[5] || storeStampShrinking[5] ? 'store stamp-filled' : 'store stamp-default'}.svg`} 
+                  alt="Store stamp 6" 
+                  className={`stamp-svg${storeStampStun[5] ? ' big-stun' : ''}${storeStampShrinking[5] ? ' big-to-small' : ''}`}
+                />
+              </div>
+              <div className="line-connector">
+                <img 
+                  src="./svg/line-default.svg" 
+                  alt="line connector" 
                   className="connector-svg"
                 />
               </div>
+              <div 
+                className="stamp-circle" 
+                style={{
+                  cursor: collectedStamps[6] ? 'default' : 'pointer'
+                }}
+                onClick={() => handleStampClick(6)}
+              >
+                <img 
+                  src={`./svg/${collectedStamps[6] || rewardStampStun || rewardStampShrinking ? 'reward stamp-filled' : 'reward stamp-default'}.svg`} 
+                  alt="Reward stamp" 
+                  className={`stamp-svg${rewardStampStun ? ' big-stun' : ''}${rewardStampShrinking ? ' big-to-small' : ''}`}
+                />
+              </div>
             </div>
-            <div className="line-connector">
-              <img 
-                src={`./svg/${totalCollected >= 4 ? 'line-filled' : 'line-default'}.svg`} 
-                alt="line connector" 
-                className="connector-svg"
-              />
-            </div>
-            <div 
-              className="stamp-circle" 
-              style={{
-                cursor: collectedStamps[2] ? 'default' : 'pointer'
-              }}
-              onClick={() => handleStampClick(2)}
-            >
-              <img 
-                src={`./svg/${collectedStamps[2] || storeStampStun[2] || storeStampShrinking[2] ? 'store stamp-filled' : 'store stamp-default'}.svg`} 
-                alt="Store stamp 3" 
-                className={`stamp-svg${storeStampStun[2] ? ' big-stun' : ''}${storeStampShrinking[2] ? ' big-to-small' : ''}`}
-              />
-            </div>
-            
-            {/* Row 3: Empty - Stamp5 - Empty */}
-            <div></div>
-            <div 
-              className="stamp-circle" 
-              style={{
-                cursor: collectedStamps[4] ? 'default' : 'pointer'
-              }}
-              onClick={() => handleStampClick(4)}
-            >
-              <img 
-                src={`./svg/${collectedStamps[4] || rewardStampStun || rewardStampShrinking ? 'reward stamp-filled' : 'reward stamp-default'}.svg`} 
-                alt="Reward stamp" 
-                className={`stamp-svg${rewardStampStun ? ' big-stun' : ''}${rewardStampShrinking ? ' big-to-small' : ''}`}
-              />
-            </div>
-            <div></div>
           </div>
         </div>
         <div className="footer">
           <div className="buttongroup">
-            <button className="redeem-btn heading4" disabled={totalCollected < 5} onClick={handleRedeemClick}>Redeem</button>
-            <div className="stamp-count body3 text">You've collected {totalCollected}/5 stamps.</div>
+            <button className="redeem-btn heading4" disabled={totalCollected < 7} onClick={handleRedeemClick}>Redeem</button>
+            <div className="stamp-count body3 text">You've collected {totalCollected}/7 stamps.</div>
           </div>
           <a href="#" className="how-to-link body3" onClick={openInstructionModal}>How to collect stamps?</a>
         </div>
@@ -471,32 +513,18 @@ export const LandingPage: React.FC = () => {
       {/* QR Code Membership Modal */}
       {isQRModalOpen && (
         <div className="modal-overlay centered show" onClick={closeQRModal}>
-          <div className="qr-modal" onClick={(e) => e.stopPropagation()}>
-            <button className="modal-close-btn qr-close-btn" onClick={closeQRModal}>
-              <IconX size={24} color="#333" />
-            </button>
+          <div className="qr-modal" onClick={handleQRDone}>
+            <div className="qr-modal-header">
+              <button className="qr-close-btn" onClick={(e) => { e.stopPropagation(); closeQRModal(); }}>
+                <IconX size={24} color="#333" />
+              </button>
+            </div>
             <div className="qr-modal-content">
-              <h2 className="qr-modal-title body2">Membership QR Code</h2>
+              <h2 className="qr-modal-title">Membership QR Code</h2>
               <div className="qr-code-container">
-                <div className="qr-code" style={{ display: 'flex', justifyContent: 'center', alignItems: 'center', position: 'relative' }}>
-                  {qrCodeDataUrl ? (
-                    <img src={qrCodeDataUrl} alt="Membership QR Code" width="200" height="200" style={{ display: 'block' }} />
-                  ) : (
-                    <div style={{ width: 200, height: 200, display: 'flex', alignItems: 'center', justifyContent: 'center', border: '1px solid #ccc', borderRadius: '8px' }}>
-                      Generating QR Code...
-                    </div>
-                  )}
-                </div>
+                <img src="./svg/membership-qr.svg" alt="Membership QR Code" className="qr-code-img" />
               </div>
               <div className="qr-username">{userInfo.username}</div>
-              {/* Demo: Button to simulate stamp collection */}
-              <button 
-                className="stamp-collected-btn heading5" 
-                onClick={handleQRDone}
-                style={{ marginTop: '16px' }}
-              >
-                Simulate Collection
-              </button>
             </div>
           </div>
         </div>
@@ -513,7 +541,7 @@ export const LandingPage: React.FC = () => {
                 </div>
                 <h2 className="body2">Stamp Collected!</h2>
                 <p className="body3 stamp-collected-text">
-                  You have successfully collected a stamp! You can collect only one stamp per store per day. <span className="stamp-collected-text-semibold">Visit other stores to collect more stamps.</span>
+                  You have successfully collected a stamp! You can collect <span className="stamp-collected-text-semibold">only one stamp per store per day.</span> Visit other stores to collect more stamps.
                 </p>
               </div>
               <button className="stamp-collected-btn heading5" onClick={confirmStampCollection}>

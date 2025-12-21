@@ -52,6 +52,7 @@ module.exports = (env, argv) => {
                     if (url.startsWith('/')) return false;
                     if (url.startsWith('images/')) return false;
                     if (url.startsWith('svg/')) return false;
+                    if (url.startsWith('bg-image')) return false;
                     return true;
                   },
                 },
@@ -102,6 +103,7 @@ module.exports = (env, argv) => {
           { from: 'public/icons', to: 'icons' },
           { from: 'public/manifest.json', to: 'manifest.json' },
           { from: 'public/sw.js', to: 'sw.js' },
+          { from: 'public/bg-image.svg', to: 'bg-image.svg' },
         ],
       }),
     ],
